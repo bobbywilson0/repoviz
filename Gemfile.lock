@@ -1,0 +1,27 @@
+GIT
+  remote: git://github.com/bobbyw/grit.git
+  revision: bbc8db3ab2b8839b670375f3ea9afb2ac36cb5fa
+  specs:
+    grit (2.4.1)
+      diff-lcs (~> 1.1)
+      mime-types (~> 1.15)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    diff-lcs (1.1.2)
+    mime-types (1.16)
+    rack (1.3.0)
+    sinatra (1.2.6)
+      rack (~> 1.1)
+      tilt (< 2.0, >= 1.2.2)
+    tilt (1.3.1)
+    yajl-ruby (0.8.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  grit!
+  sinatra
+  yajl-ruby
