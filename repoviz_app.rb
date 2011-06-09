@@ -22,8 +22,8 @@ class RepovizApp < Sinatra::Base
   get '/:username/:project/committers.json' do
     repovis = Repoviz::Repo.new(params[:username], params[:project])
     repovis.pull
-    commits = {:commits => []}
-    repovis.grit_repo.commits('master', 20).each { |commit| commits[:commits] << { :author => commit.author, :total => commit.stats.total } }
+    commits = {:children => []}
+    repovis.grit_repo.commits('master', 20).each { |commit| commits[:children] << { :author => commit.author, :value => commit.stats.total } }
       
 
     content_type :json
